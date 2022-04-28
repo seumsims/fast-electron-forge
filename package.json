@@ -1,6 +1,6 @@
 {
   "name": "fast-electron-forge",
-  "productName": "fast-electron-forge",
+  "productName": "nodemon --exec fast-electron-forge",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/star.js",
