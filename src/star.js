@@ -21,14 +21,19 @@ const createWindow = () => {
     y: mainWindowState.y,
     width: mainWindowState.width,
     height: mainWindowState.height,
-    title: "Salamoon Alaikoom from star js with auto window state"
+    title: "Salamoon Alaikoom from star js with auto window state",
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
   });
 
   
 
   // and load the index.html of the app.
   // mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  mainWindow.loadFile('src/index.html');
+  // mainWindow.loadFile('src/index.html');
+  mainWindow.loadURL("https://seum.xyz");
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
@@ -54,7 +59,9 @@ const createWindow = () => {
 // app.on('ready', createWindow);
 
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
+  console.log("console log from star js");
+
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
