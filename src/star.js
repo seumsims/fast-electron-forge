@@ -20,13 +20,10 @@ const createWindow = () => {
     y: mainWindowState.y,
     width: mainWindowState.width,
     height: mainWindowState.height,
-    title: "Salamoon Alaikoom from star js with nodemon"
+    title: "Salamoon Alaikoom from star js with auto window state"
   });
 
-  // Let us register listeners on the window, so we can update the state
-  // automatically (the listeners will be removed when the window is closed)
-  // and restore the maximized or full screen state
-  mainWindowState.manage(mainWindow);
+  
 
   // and load the index.html of the app.
   // mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -34,6 +31,11 @@ const createWindow = () => {
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
+
+  // Let us register listeners on the window, so we can update the state
+  // automatically (the listeners will be removed when the window is closed)
+  // and restore the maximized or full screen state
+  mainWindowState.manage(mainWindow);
 
   
 };
