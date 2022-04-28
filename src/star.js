@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const windowStateKeeper = require('electron-window-state');
+const isDev = require('electron-is-dev');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -31,6 +32,13 @@ const createWindow = () => {
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
+
+  if (isDev) {
+    mainWindow.webContents.openDevTools();
+    console.log('Running in development');
+  } else {
+    console.log('Running in production');
+  }
 
   // Let us register listeners on the window, so we can update the state
   // automatically (the listeners will be removed when the window is closed)
