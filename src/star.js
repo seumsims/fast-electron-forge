@@ -23,8 +23,7 @@ const createWindow = () => {
     height: mainWindowState.height,
     title: "Salamoon Alaikoom from star js with auto window state",
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
+      preload: path.join(__dirname , 'preload.js')
     }
   });
 
@@ -33,7 +32,7 @@ const createWindow = () => {
   // and load the index.html of the app.
   // mainWindow.loadFile(path.join(__dirname, 'index.html'));
   // mainWindow.loadFile('src/index.html');
-  mainWindow.loadURL("https://seum.xyz");
+  mainWindow.loadURL("https://google.com");
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
