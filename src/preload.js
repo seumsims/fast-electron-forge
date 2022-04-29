@@ -1,2 +1,7 @@
 console.log('SALAM from preload js');
-console.log(process);
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('button').addEventListener('click', () => {
+        console.log(process.version);
+    });
+});
