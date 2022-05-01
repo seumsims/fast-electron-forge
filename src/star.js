@@ -23,7 +23,8 @@ const createWindow = () => {
     height: mainWindowState.height,
     title: "Salamoon Alaikoom from star js with auto window state",
     webPreferences: {
-      preload: path.join(__dirname , 'preload.js')
+      preload: path.join(__dirname , 'preload.js'),
+      contextIsolation: false
     }
   });
 
